@@ -1,0 +1,14 @@
+{
+  "name": "pw2-servi-o-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Edneuza Costa",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^19.1.1"
+  }
+}
