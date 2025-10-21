@@ -1,2 +1,2 @@
-node_modules/
-.next/
+node_modules/ // dependencias do node   
+.next/ // arquivos gerados pelo next
