@@ -1,22 +1,16 @@
 import { useLinkStatus } from "next/link.js";
 import { filmes }from "../data/filmes.js"//importar o array de filmes
+import CardFilme from "../components/CardFilme/index.js"//importar o componente CardFilme
 
-function CardFilme({filme}) {
-    const estiloImagem = {//objeto de estilo para a imagem  
-        width:"300px"//definir a largura da imagem
-    };//fechar o objeto de estilo
 
-    return(
-         <li key={`card-filme-${filme.id}`}> 
-                                <p>Título:{ filme.titulo}</p>
-                                <p> Ano:{ filme.ano}</p>
-                                <p> Gênero:{ filme.genero}</p>
-                                <p>Nota:{ filme.nota}</p>
-                                <img style={estiloImagem} src={filme.poster}/>
-                            </li>
-    )
-}
 function Home() {//componente Home
+    const estiloListaCard = {//objeto de estilo para a lista de cards
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",//definir 3 colunas de largura igual
+        gap: "16px",//definir o espaçamento entre os cards
+        listStyle: "none",//remover os marcadores da lista
+       
+    };//fechar o objeto de estilo
 
     return <>
     return <h1>Filmes</h1>//título da página
@@ -24,7 +18,7 @@ function Home() {//componente Home
     <ul>//lista de filmes 
         <li>//item da lista
             <p>Nome do filme</p>
-            <ul>
+            <ul style ={estiloListaCard}> //lista de cards de filmes com o estilo definido
                 {
                     filmes.map(( filme) => {
                         return(
@@ -43,4 +37,5 @@ function Home() {//componente Home
         </>  
 }
 export default Home;//exportar o componente Home como padrão
+
    
